@@ -19,7 +19,7 @@
                                 </div>
 
                                 <div class="input-group-append">
-                                    <button type="submit" class="btn bg-slate btn-lg">Recherche</button>
+                                    <button type="submit" class="btn bg-orange btn-lg">Recherche</button>
                                 </div>
                             </div>
 
