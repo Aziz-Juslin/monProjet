@@ -40,7 +40,7 @@
                    <h3 class="font-weight-semibold mb-0">$ {{$FraisTroisiemeTPayeParEleveEnDollar}}</h3>
                   @endif
                   @endforeach
-                 
+
                   <span class="text-muted font-size-lg">Montant payé</span>
                 </div>
 

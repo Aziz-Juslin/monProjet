@@ -9,18 +9,12 @@
       <!-- Orders history (datatable) -->
       <div class="row">
          <div class="col-md-3">
-
             <div data-toggle="modal" data-target="#invoice1" class="btn bg-orange-400 btn-block mt-1">
             <span class="text-uppercase  font-size-sm font-weight-bold"><i class="icon-cart-add mr-2 icon-1x"></i> Payer autre Frais</span>
-
                 </div>
-
-
-
                 <div class="card-header bg-transparent header-elements-inline">
                   <span class="text-uppercase font-size-sm font-weight-semibold">Categories</span>
                 </div>
-
                 <div class=" border-0 p-0">
                   <ul class="nav nav-sidebar ">
                     @foreach($descriptions as $recu)

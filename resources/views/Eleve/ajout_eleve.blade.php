@@ -1,4 +1,4 @@
-@extends('layouts.master1', ['title'=> 'Ajouter élève'])
+@extends('layouts.master3', ['title'=> 'Ajouter élève'])
 @section('section')
 <div class="content-wrapper">
 @include('Eleve.tete')
@@ -7,7 +7,7 @@
 <!-- Form action components -->
 <div class="row">
 
-<div class="col-md-6">
+<div class="col-md-9">
 @if(!$cycles->isEmpty())
  @include('Eleve.form')
 @else
@@ -25,21 +25,12 @@
 @endif
 </div>
 
-<div class="col-md-6">
-<div class="card">
-                            <div class="card-header header-elements-inline">
-                                <h5 class="card-title">Liste</h5>
-                                <div class="header-elements">
-                                    <div class="list-icons">
-                                        <a class="list-icons-item" data-action="collapse"></a>
-                                        <a class="list-icons-item" data-action="reload"></a>
-                                        <a class="list-icons-item" data-action="remove"></a>
-                                    </div>
-                                </div>
-                            </div>
+<div class="col-md-3">
+<div class="">
+
 
                             <ul class="media-list media-list-linked">
-                                <li class="media bg-light font-weight-semibold py-2">Elèves recents</li>
+                                <li class="media  font-weight-semibold py-2">Elèves recents</li>
                                  @forelse($EleveRecent as $eleve)
                                 <li>
                                     <a href="{{route('eleve_show', [$eleve->id, $eleve->slug, $eleve->post_nom, $eleve->prenom])}}" class="media">
@@ -53,12 +44,7 @@
                                             <div class="media-title font-weight-semibold">{{$eleve->nom}} {{$eleve->post_nom}} {{$eleve->prenom}}</div>
                                             <span class="text-muted">{{$eleve->sexe == 'M'? 'inscrit':'inscrite'}} le {{date('d', strtotime($eleve->created_at))}} {{AfficheMois(date('m', strtotime($eleve->created_at)))}} {{date('Y', strtotime($eleve->created_at))}}</span>
                                         </div>
-                                        <div class="align-self-center ml-3 text-nowrap">
-                                            <span class="text-muted">
-                                                <i class="icon-pin-alt font-size-base mr-1"></i>
-                                                Vienna
-                                            </span>
-                                        </div>
+
                                     </a>
                                 </li>
                                 @empty

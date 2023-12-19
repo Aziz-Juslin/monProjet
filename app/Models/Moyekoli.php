@@ -46,9 +46,10 @@ class Moyekoli extends Model
         parent::boot();
         static::creating(function($id){
             $dat = date('Y');
+            $idd = Moyekoli::pluck('id')->last();
             $r = Str::random(4);
             $id->slug = Str::slug(ucfirst($id->nom));
-            $id->code_eleve = "$id->id$r$dat";
+            $id->code_eleve = $r.Str::slug($id->id).$dat;
         });
 
 

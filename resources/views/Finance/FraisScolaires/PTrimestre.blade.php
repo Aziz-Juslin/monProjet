@@ -22,7 +22,7 @@
               @endforeach
             </div>
               <div class="row text-center mt-2 p-2">
-                
+
                 @foreach($FraisFixePourEleve as $modalite)
                 @if(! $modalite->montant_franc == null or ! $modalite->montant_dollar == null )
                 @if($FraisPremierTPayeParEleveEnFranc > $modalite->montant_franc or $FraisPremierTPayeParEleveEnDollar > $modalite->montant_dollar)
@@ -62,7 +62,7 @@
                   @endforeach
                   <span class="text-muted font-size-lg">Reste à payer</span>
                 </div>
-                
+
                 @endif
                 @endif
                 @endforeach

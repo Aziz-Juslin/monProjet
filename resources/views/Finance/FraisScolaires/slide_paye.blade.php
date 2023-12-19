@@ -10,7 +10,7 @@
 							          <div class="">
                             <div class="row">
                                @foreach($VoirElevePhoto as $eleve)
-                                <div class="col-lg-12"> 
+                                <div class="col-lg-12">
                                 <div class="modal-body text-center p-1">
                                 <div class="mr-3">
                                  @if(!$eleve->photo_eleve == '')
@@ -24,13 +24,13 @@
                                 <hr>
                                 @if(! $eleve->active == '1')
                                <form action="{{route('dola_frais', $eleve->id)}}" method="post">
-                                @csrf 
+                                @csrf
                                 @foreach($FraisFixePourEleve as $modalite)
-                                @if(! $modalite->montant_dollar == null)            
+                                @if(! $modalite->montant_dollar == null)
                                 <div class="form-group">
                                 <label for="exampleInputEmail1">Préciser le montant</label>
                                 <input type="number" name="dollar" class="form-control" id="exampleInputEmail1" placeholder="$">
-                                </div>              
+                                </div>
                                 @else
                                  <div class="form-group">
                                 <label for="exampleInputEmail1">Préciser le montant </label>
@@ -42,21 +42,21 @@
                                 <select name="trimestre" class="form-control basic-ele-mg-b-10" >
                                 <option value="1èr Trimestre">1<sub>èr</sub> Trimestre</option>
                                 <option value="2ème Trimestre">2<sub>ème</sub> Trimestre</option>
-                                <option value="3ème Trimestre">3<sub>ème</sub> Trimestre</option>                
-                                </select> 
-                                </div> 
+                                <option value="3ème Trimestre">3<sub>ème</sub> Trimestre</option>
+                                </select>
+                                </div>
                                 <div class="form-group">
                                 <label for="exampleInputEmail1">Année scolaire </label>
                                 <input type="text" name="annee" class="form-control" id="exampleInputEmail1" value="{{AnneeSco()}}">
-                                </div>   
-                                <button type="submit" class="btn bg-warning-400 form-control font-weight-bold">Confirmer</button>
-                                
+                                </div>
+                                <button type="submit" class="btn bg-orange-400 form-control font-weight-bold">Confirmer</button>
+
                                     </form>
                                      @else
                                     <div>
                                     <hr>
-                                    <h3 class="text-center text-muted mt-3">L'élève est désactivé</h3>      
-                                    <p class="text-center mt-3"><i style="font-size: 95px; color: wheat;" class="icon-exclamation"></i></p>        
+                                    <h3 class="text-center text-muted mt-3">L'élève est désactivé</h3>
+                                    <p class="text-center mt-3"><i style="font-size: 95px; color: wheat;" class="icon-exclamation"></i></p>
                                     </div>
                                 @endif
                                 @endforeach

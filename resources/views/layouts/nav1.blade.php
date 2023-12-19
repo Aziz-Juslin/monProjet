@@ -2,7 +2,7 @@
     <div class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="navbar-brand wmin-200">
            <a href="{{route('home')}}" class="d-inline-block">
-				<img src="/img/ds.png" alt="">
+				<img src="/img/d6.png" alt="">
 			</a>
         </div>
 

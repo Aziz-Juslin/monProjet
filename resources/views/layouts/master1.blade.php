@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>{{ isset($title) ? $title  . ' | ' : '' }} 2-SIX</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/img/ds.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/d6.png" />
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
 <link href="{{asset('/global_assets/css/icons/icomoon/styles.min.css')}}" rel="stylesheet" type="text/css">
@@ -28,7 +28,7 @@
 	<script src="{{asset('/global_assets/js/plugins/ui/moment/moment.min.js')}}"></script>
 	<script src="{{asset('/global_assets/js/plugins/pickers/daterangepicker.js')}}"></script>
 	<script src="{{asset('/global_assets/js/plugins/ui/perfect_scrollbar.min.js')}}"></script>
-	<script src="{{asset('/assets/js/app.js')}}"></script>
+
 	<script src="{{asset('/global_assets/js/demo_pages/dashboard.js')}}"></script>
 	<script src="{{asset('/global_assets/js/demo_pages/layout_fixed_sidebar_custom.js')}}"></script>
 	<!-- /theme JS files -->

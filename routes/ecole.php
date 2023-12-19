@@ -24,6 +24,7 @@ Route::get('/gestionnaire-info', [App\Http\Controllers\Ecole\GestionnaireControl
 
 Route::get('/infos-admin', [App\Http\Controllers\Ecole\AdminController::class, 'create'])->name('info_admin');
 Route::post('/store_gestionnaire', [App\Http\Controllers\Ecole\AdminController::class, 'store_gestionnaire'])->name('store_gestionnaire');
+Route::post('/store_admin', [App\Http\Controllers\Ecole\AdminController::class, 'store'])->name('store_admin');
 Route::post('/update-admin/{id}', [App\Http\Controllers\Ecole\AdminController::class, 'update'])->name('update_admin');
 Route::post('/admin-photo/{id}', [App\Http\Controllers\Ecole\AdminController::class, 'imageAdmin'])->name('mod_photo_admin');
 Route::get('/info-super-administrateur', [App\Http\Controllers\Ecole\AdminController::class, 'show'])->name('admin_show');

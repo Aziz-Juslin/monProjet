@@ -14,7 +14,7 @@
           </div>
         <!-- Page header -->
         <div class="profile-cover">
-          <div class="profile-cover-img bg-slate" style="background-image: url(./img/bg.png); background-position:"></div>
+          <div class="profile-cover-img bg-slate" style="background-image: url(../../../../global_assets/images/backgrounds/panel_bg.png); background-position:center"></div>
           <div class="media align-items-center text-center text-md-left flex-column flex-md-row m-0">
             <div class="mr-md-3 mb-2 mb-md-0">
               <a  class="profile-thumb">
@@ -31,7 +31,7 @@
             </div>
             <div class="ml-md-3 mt-2 mt-md-0">
               <ul class="list-inline list-inline-condensed mb-0">
-                <li class="list-inline-item"><a class="btn bg-slate border-transparent"><i class="{{$eleve->active == 0 ?'icon-unlocked2':'icon-lock'}}"></i> </a></li> 
+                <li class="list-inline-item"><a class="btn bg-slate border-transparent"><i class="{{$eleve->active == 0 ?'icon-unlocked2':'icon-lock'}}"></i> </a></li>
               </ul>
             </div>
           </div>
@@ -54,7 +54,7 @@
                   {{ucfirst($eleve->nom)}}
                 </a>
               </li>
-              
+
               <li class="nav-item">
                 <a href="{{route('eleve_info',[$eleve->id, $eleve->slug, $eleve->post_nom, $eleve->prenom])}}" class="navbar-nav-link {{col_active('eleve_info')}}">
                   <i class="icon-user mr-2"></i>
@@ -78,7 +78,7 @@
                   <i class="icon-bookmark4 mr-2"></i>
                   Paiement Trimestriel
                 </a>
-              </li> 
+              </li>
                <li class="nav-item">
                 <a href="{{route('eleve_recu',[$eleve->id, $eleve->slug, $eleve->post_nom, $eleve->prenom])}}" class="navbar-nav-link {{col_active('eleve_recu')}}" >
                   <i class="icon-clipboard3 mr-2"></i>
@@ -90,7 +90,7 @@
                   <i class="icon-cash2 mr-2"></i>
                    Autres frais
                 </a>
-              </li> 
+              </li>
             </ul>
             <ul class="nav navbar-nav ml-lg-auto">
               <li class="nav-item">

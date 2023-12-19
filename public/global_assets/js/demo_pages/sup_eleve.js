@@ -63,6 +63,52 @@ $(document).on('click', '.autrefrais', function (e) {
     });
 /////////////////fin delete eleve//////////////////////
 
+///////////////delete rapport frais scolaire////////////////////////////
+$(document).on('click', '.frais_scolaire_rapport', function (e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    var nam = $(this).data('name');
+        swal({
+            title: `Voulez-vous supprimer ?`,
+            text: `rapport de ${nam}`,
+            showCancelButton: true,
+            confirmButtonText: 'OUI',
+            cancelButtonText: 'ANNULER',
+            confirmButtonClass: 'btn bg-orange-400',
+            cancelButtonClass: 'btn btn-light',
+            buttonsStyling: false
+        }).then((isConfirm) => {
+        if (isConfirm.value === true) {
+            window.location = `/${id}frais_scolaire_rapport`
+        }
+
+       });
+    });
+/////////////////fin delete //////////////////////
+
+///////////////delete rapport autre frais////////////////////////////
+$(document).on('click', '.autre_frais_rapport', function (e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    var nam = $(this).data('name');
+        swal({
+            title: ` Voulez-vous supprimer ?`,
+            text: `rapport de ${nam}`,
+            showCancelButton: true,
+            confirmButtonText: 'OUI',
+            cancelButtonText: 'ANNULER',
+            confirmButtonClass: 'btn bg-orange-400',
+            cancelButtonClass: 'btn btn-light',
+            buttonsStyling: false
+        }).then((isConfirm) => {
+        if (isConfirm.value === true) {
+            window.location = `/${id}autre_frais_rapport`
+        }
+
+       });
+    });
+/////////////////fin delete eleve//////////////////////
+
 
 ///////////////delete cycle////////////////////////////
 $(document).on('click', '.cycle', function (e) {

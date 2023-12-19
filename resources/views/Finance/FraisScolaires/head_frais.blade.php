@@ -19,11 +19,10 @@
                   <i class="icon-stack mr-2"></i> Trimestre
                   <span class="d-lg-none ml-2"></span>
                 </a>
-
                 <div class="dropdown-menu dropdown-menu">
-        <a href="" class="dropdown-item"><i class="icon-stack"></i> 1<sup class="mr-2">ère</sup> Trimestre</a>
-        <a href="" class="dropdown-item"><i class="icon-stack"></i> 2<sup class="mr-2">ème</sup> Trimestre</a>
-        <a href="" class="dropdown-item"><i class="icon-stack"></i> 3<sup class="mr-2">ème</sup> Trimestre</a>
+                <a href="" class="dropdown-item"><i class="icon-stack"></i> 1<sup class="mr-2">ère</sup> Trimestre</a>
+                <a href="" class="dropdown-item"><i class="icon-stack"></i> 2<sup class="mr-2">ème</sup> Trimestre</a>
+                <a href="" class="dropdown-item"><i class="icon-stack"></i> 3<sup class="mr-2">ème</sup> Trimestre</a>
                 </div>
               </li>
 

@@ -1,10 +1,12 @@
  <div class="content-wrapper">
+    @include('Eleve.tete')
+    @include('Eleve.head1_eleve')
       <!-- Content area -->
       <div class="content">
       <!-- Orders history (datatable) -->
       <div class="row">
          <div class="col-md-3">
-          <div data-toggle="modal" data-target="#modal_default" class="btn bg-blue btn-block mt-1">
+          <div data-toggle="modal" data-target="#modal_default" class="btn bg-orange btn-block mt-1">
             <span class="text-uppercase  font-size-sm font-weight-semibold">{{AnneeScolaire()}}</span>
             </div>
                 <div class="mt-2">
@@ -16,7 +18,7 @@
                 <div class="form-group-feedback form-group-feedback-right">
                   <select type="text" name="moda" class="form-control form-control-lg">
                     @foreach($AnneeModalite as $moda)
-                    <option value="{{$moda->annee_modalite}}"> 
+                    <option value="{{$moda->annee_modalite}}">
                     {{$moda->annee_modalite}}</option>
                     @endforeach
                   </select>
@@ -41,29 +43,20 @@
               <!-- /categories -->
 
               <div class="col-md-9">
-        <div class="">
-        <div class="card-header bg-slate header-elements-inline">
-        <span class="text-uppercase  font-size-sm font-weight-semibold">Paiement Trimestriel</span>
-      </div>
-       <div class="card-body">
-              <div class="d-md-flex align-items-md-center flex-md-wrap text-center text-md-left">
-                <ul class="list-inline mb-0 ml-md-auto">
-                  <li class="list-inline-item dropdown">
-                    <a href="{{route('eleve_show', [$eleve->id, $eleve->slug, $eleve->post_nom, $eleve->prenom])}}" class="btn btn-link text-default">
-                      <i class="icon-display mr-2"></i>
-                      {{$eleve->nom}} {{$eleve->post_nom}} {{$eleve->prenom}}
-                    </a>
-                  </li>
-                </ul>
-              </div>
-          </div>
+                <div class="mb-3">
+                    <h6 class="mb-0 font-weight-semibold">
+                      Paiement Trimestriel
+                    </h6>
+                    <span class="text-muted d-block">Année scolaire: <code>{{Anneesco()}}</code></span>
+                  </div>
+
       <div class="row">
         <div class="col-sm-6 col-lg-4">
         @include('Eleve.frais.fraisPTerminer')
         </div>
         <div class="col-sm-6 col-lg-4">
           @include('Eleve.frais.fraisDTerminer')
-        </div> 
+        </div>
         <div class="col-sm-6 col-lg-4">
         @include('Eleve.frais.fraisTTerminer')
         </div>
