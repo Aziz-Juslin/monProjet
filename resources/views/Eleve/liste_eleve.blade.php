@@ -6,47 +6,22 @@
       <div class="content">
       <!-- Orders history (datatable) -->
       <div class="row">
-         <div class="col-md-3">
-          <div class="card">
-            <div class="card-header ">
-          <div data-toggle="modal" data-target="#ajout" class="btn bg-orange-400 btn-block mt-1">
-            <span class="text-uppercase  font-size-sm font-weight-semibold"><i class="icon-user-plus mr-2"></i>Ajouter élève</span>
-                </div>
-                <div class="mt-4">
-               </div>
-                <div class="card-header bg-transparent header-elements-inline">
-                  <span class="text-uppercase font-size-sm font-weight-semibold">Categories</span>
-                </div>
-                <div class=" border-0 p-0">
-                  <ul class="nav nav-sidebar ">
-                    @foreach($ArchiveCycle as $archive)
-                      <li class="nav-item ">
-                      <a href="" class="nav-link"><i class="icon-arrow-right13"></i>{{$archive->annee_scolaire}}</a>
-                    </li>
-                    @endforeach
-                  </ul>
-                </div>
-                </div>
-                </div>
-                </div>
-              <!-- /categories -->
-
-        <div class="col-md-9">
+        <!-- /categories -->
+        <div class="col-md-12">
              <div class="card">
                     <div class="card-body">
-
                         <form action="{{route('eleve_liste')}}" method="get">
                           @csrf
                             <div class="input-group mb-3">
                                 <div class="form-group-feedback form-group-feedback-left">
-                                    <input type="text" name="qbjnnknknk1047" class="form-control form-control-lg" placeholder="Tapez le nom de la recherche">
+                                    <input type="text" name="qbjnnknknk1047" class="form-control form-control-lg" placeholder="Tapez le nom de l'élève">
                                     <div class="form-control-feedback form-control-feedback-lg">
                                         <i class="icon-search4 text-muted"></i>
                                     </div>
                                 </div>
 
                                 <div class="input-group-append">
-                                    <button type="submit" class="btn bg-light btn-lg">Recherche</button>
+                                    <button type="submit" class="btn bg-orange btn-lg">Recherche</button>
                                 </div>
                             </div>
 
@@ -55,14 +30,19 @@
                                     <li class="list-inline-item dropdown">
                                         <a href="#" class="btn btn-link text-default dropdown-toggle" data-toggle="dropdown">
                                             <i class="icon-stack2 mr-2"></i>
-                                            All categories
+                                            voir par année scolaire
                                         </a>
 
                                         <div class="dropdown-menu">
-                                            <a href="#" class="dropdown-item"><i class="icon-question7"></i> Getting started</a>
+                                            @foreach($ArchiveCycle as $archive)
+
+                                            <a href="" class="dropdown-item"><i class="icon-arrow-right13"></i>{{$archive->annee_scolaire}}</a>
+
+                                            @endforeach
                                         </div>
                                     </li>
                                     <li class="list-inline-item"><a href="#" class="btn btn-link text-default"><i class="icon-calendar mr-2"></i> {{AnneeSco()}}</a></li>
+                                    <li data-toggle="modal" data-target="#ajout" class="list-inline-item"><a href="#" class="btn btn-link text-default"><i class="icon-user-plus mr-2"></i> Ajouter</a></li>
                                 </ul>
 
                                 <ul class="list-inline mb-0 ml-md-auto">
@@ -87,7 +67,7 @@
           @if(!$Eleves->isEmpty())
             <div class="row">
           @foreach($Eleves as $eleve)
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="card card-body">
               <div class="media">
                 <div class="mr-3">
@@ -101,7 +81,7 @@
                 </div>
                 <div class="media-body">
                   <h6 class="mb-0 font-weight-semibold">{{$eleve->nom}} {{$eleve->post_nom}} {{$eleve->prenom}}</h6>
-                  <span class="text-muted">{{$eleve->sexe == 'M'? 'inscrit':'inscrite'}} le {{date('d', strtotime($eleve->created_at))}} {{AfficheMois(date('m', strtotime($eleve->created_at)))}} {{date('Y', strtotime($eleve->created_at))}} | Classe: {{$eleve->classe}} {{$eleve->cycle}}</span>
+                  <span class="text-muted">{{$eleve->sexe == 'M'? 'inscrit':'inscrite'}} le {{date('d', strtotime($eleve->created_at))}} {{AfficheMois(date('m', strtotime($eleve->created_at)))}} {{date('Y', strtotime($eleve->created_at))}}</span>
                 </div>
 
                 <div class="ml-3 align-self-center">

@@ -1,10 +1,9 @@
-@extends('layouts.master', ['title' => Auth::user()->name])
+@extends('layouts.master3', ['title' => Auth::user()->name])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
             <div class="content">
-                @include('ecole.message_ecole')
                 <!-- Form action components -->
                 <div class="row">
                     <div class="col-md-12">
@@ -80,18 +79,18 @@
                                         @enderror
                                     </div>
                                     <div class="form-group row">
-                                <label class="col-lg-2 col-form-label font-weight-semibold">Photo de l'école:</label>
-                                <div class="col-lg-10">
-                                    <input type="file" name="photo_ecole" class="file-input" data-fouc>
-                                    @error('photo_ecole')
-                                         <span class="text-left text-muted">
-                                          <span style="color: darkred;" ><m>{{ $message }}</m></span>
-                                        </span>
-                                    @enderror
-                                </div>
-                                </div>
+                                        <label class="col-form-label col-lg-2">Photo de l'école</label>
+                                        <div class="col-lg-10">
+                                            <input type="file" name="photo_ecole" class="form-control-uniform-custom">
+                                            @error('photo_ecole')
+                                                 <span class="text-left text-muted">
+                                                  <span style="color: darkred;" ><m>{{ $message }}</m></span>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                     <div class="d-flex justify-content-start align-items-center">
-                                        
+
                                         <button type="submit" class="btn bg-blue ml-3">Confirmer <i class="icon-paperplane ml-2"></i></button>
                                     </div>
                                 </form>

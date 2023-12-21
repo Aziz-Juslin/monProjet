@@ -4,9 +4,9 @@
 
     var SweetAlert = function() {};
 
-    //examples 
+    //examples
     SweetAlert.prototype.init = function() {
-        
+
     //Basic
     $('#sa-basic').click(function(){
         swal("Here's a message!");
@@ -22,20 +22,20 @@ $(document).on('click', '.eleve', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
     var nom = $(this).data('name');
-        swal({        
+        swal({
             title: ` Voulez-vous supprimer ${nom} ?`,
             text: "l'élève sera supprimé avec toutes ses données !",
             showCancelButton: true,
             confirmButtonText: 'OUI',
             cancelButtonText: 'ANNULER',
-            confirmButtonClass: 'btn bg-warning-400',
+            confirmButtonClass: 'btn bg-orange-400',
             cancelButtonClass: 'btn btn-light',
             buttonsStyling: false
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
-            window.location = `/${id}eleve_sup` 
+            window.location = `/${id}eleve_sup`
         }
-        
+
        });
     });
 /////////////////fin delete eleve//////////////////////
@@ -45,20 +45,66 @@ $(document).on('click', '.eleve', function (e) {
 $(document).on('click', '.autrefrais', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
-        swal({        
+        swal({
             title: ` Voulez-vous supprimer ?`,
             text: "le frais sera supprimé !",
             showCancelButton: true,
             confirmButtonText: 'OUI',
             cancelButtonText: 'ANNULER',
-            confirmButtonClass: 'btn bg-warning-400',
+            confirmButtonClass: 'btn bg-orange-400',
             cancelButtonClass: 'btn btn-light',
             buttonsStyling: false
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
-            window.location = `/${id}deleteautre` 
+            window.location = `/${id}deleteautre`
         }
-        
+
+       });
+    });
+/////////////////fin delete eleve//////////////////////
+
+///////////////delete rapport frais scolaire////////////////////////////
+$(document).on('click', '.frais_scolaire_rapport', function (e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    var nam = $(this).data('name');
+        swal({
+            title: `Voulez-vous supprimer ?`,
+            text: `rapport de ${nam}`,
+            showCancelButton: true,
+            confirmButtonText: 'OUI',
+            cancelButtonText: 'ANNULER',
+            confirmButtonClass: 'btn bg-orange-400',
+            cancelButtonClass: 'btn btn-light',
+            buttonsStyling: false
+        }).then((isConfirm) => {
+        if (isConfirm.value === true) {
+            window.location = `/${id}frais_scolaire_rapport`
+        }
+
+       });
+    });
+/////////////////fin delete //////////////////////
+
+///////////////delete rapport autre frais////////////////////////////
+$(document).on('click', '.autre_frais_rapport', function (e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+    var nam = $(this).data('name');
+        swal({
+            title: ` Voulez-vous supprimer ?`,
+            text: `rapport de ${nam}`,
+            showCancelButton: true,
+            confirmButtonText: 'OUI',
+            cancelButtonText: 'ANNULER',
+            confirmButtonClass: 'btn bg-orange-400',
+            cancelButtonClass: 'btn btn-light',
+            buttonsStyling: false
+        }).then((isConfirm) => {
+        if (isConfirm.value === true) {
+            window.location = `/${id}autre_frais_rapport`
+        }
+
        });
     });
 /////////////////fin delete eleve//////////////////////
@@ -69,20 +115,20 @@ $(document).on('click', '.cycle', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
     var nom = $(this).data('name');
-        swal({        
+        swal({
             title: ` Voulez-vous supprimer  ${nom} ?`,
             text: 'Le cycle sera supprimé avec toutes ses données !',
             showCancelButton: true,
             confirmButtonText: 'OUI',
             cancelButtonText: 'ANNULER',
-            confirmButtonClass: 'btn bg-warning-400',
+            confirmButtonClass: 'btn bg-orange-400',
             cancelButtonClass: 'btn btn-light',
             buttonsStyling: false
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
-            window.location = `/${id}cycle` 
+            window.location = `/${id}cycle`
         }
-        
+
        });
     });
 /////////////////fin//////////////////////
@@ -92,20 +138,20 @@ $(document).on('click', '.option', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
     var nom = $(this).data('name');
-        swal({        
+        swal({
             title: ` Voulez-vous supprimer  ${nom} ?`,
             text: "L'option sera supprimé avec toutes ses données !",
             showCancelButton: true,
             confirmButtonText: 'OUI',
             cancelButtonText: 'ANNULER',
-            confirmButtonClass: 'btn bg-warning-400',
+            confirmButtonClass: 'btn bg-orange-400',
             cancelButtonClass: 'btn btn-light',
             buttonsStyling: false
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
-            window.location = `/${id}option` 
+            window.location = `/${id}option`
         }
-        
+
        });
     });
 /////////////////fin delete eleve//////////////////////
@@ -114,15 +160,15 @@ $(document).on('click', '.edit_franc', function(e) {
           var id = $(this).data('id');
             e.preventDefault();
             $('#edit-franc').modal('show');
-           
-    
+
+
 });
 
 $(document).on('click', '.update_recu_franc', function(e) {
           var id = $(this).data('id');
           var montant = $('.montant').val();
             e.preventDefault();
-            
+
             $.ajax({
                 type: "post",
                 url: '/recu-update/' + id + montant,
@@ -145,7 +191,7 @@ $(document).on('click', '.update_recu_franc', function(e) {
                         $('tbody').append(' <tr>\
                             <td>' + item.id + '</td>\
                             <td>' + item.franc + '</td>\
-                            <td><button type="button" value="' + item                                                                            
+                            <td><button type="button" value="' + item
                             .id + '" class="btn btn-primary btn-sm edit">edit</button></td>\
                             <td><button type="button" value="' + item
                             .id + '" class="btn btn-danger btn-sm delete">Delete</button></td>\
@@ -162,7 +208,7 @@ $(document).on('click', '.edit_dollar', function(e) {
           var montant = $(this).data('name');
             e.preventDefault();
             $('#edit-dollar').modal('show');
-    
+
 });
 
 ///////////////delete perso////////////////////////////
@@ -171,13 +217,13 @@ $(document).on('click', '.button_perso', function (e) {
     var id = $(this).data('id');
     var nom = $(this).data('name');
     var image = $(this).data('image');
-        swal({   
-            imageUrl: `/uploads/base_personnel/${image}`,     
-            imageWidth: 60,   
-            imageHeight: 60,  
-            title: "Voulez-vous supprimer ?", 
+        swal({
+            imageUrl: `/uploads/base_personnel/${image}`,
+            imageWidth: 60,
+            imageHeight: 60,
+            title: "Voulez-vous supprimer ?",
             confirmButtonText: "OUI",
-            cancelButtonText: "ANNULER", 
+            cancelButtonText: "ANNULER",
             showCancelButton: true,
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
@@ -185,9 +231,9 @@ $(document).on('click', '.button_perso', function (e) {
           swal({
             text: `${nom} est supprimé`,
             type: "success",
-          });  
+          });
         }
-        
+
        });
     });
 /////////////////fin delete eleve//////////////////////
@@ -195,39 +241,39 @@ $(document).on('click', '.button_perso', function (e) {
 ///////////////effectuer le rapport////////////////////////////
 $(document).on('click', '.rapport_frais', function (e) {
     e.preventDefault();
-        swal({     
+        swal({
             title: ` Voulez-vous éffectuer le rapport ?`,
             text: "Le rapport de frais scolaires d'hier sera afficher  !",
             showCancelButton: true,
             confirmButtonText: 'Confirmer',
             cancelButtonText: 'Annuler',
-            confirmButtonClass: 'btn bg-warning-400',
+            confirmButtonClass: 'btn bg-orange-400',
             cancelButtonClass: 'btn btn-light',
             buttonsStyling: false
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
-            window.location = `/rapportFraisScoliares`  
+            window.location = `/rapportFraisScoliares`
         }
-        
+
        });
     });
 
 $(document).on('click', '.rapport_autre', function (e) {
     e.preventDefault();
-        swal({     
+        swal({
             title: ` Voulez-vous éffectuer le rapport ?`,
             text: "Le rapport de frais scolaires d'hier sera afficher  !",
             showCancelButton: true,
             confirmButtonText: 'Confirmer',
             cancelButtonText: 'Annuler',
-            confirmButtonClass: 'btn bg-warning-400',
+            confirmButtonClass: 'btn bg-orange-400',
             cancelButtonClass: 'btn btn-light',
             buttonsStyling: false
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
-            window.location = `/rapportAutreFrais`  
+            window.location = `/rapportAutreFrais`
         }
-        
+
        });
     });
 /////////////////fin delete eleve//////////////////////
@@ -236,13 +282,13 @@ $(document).on('click', '.rapport_autre', function (e) {
 $(document).on('click', '.recu', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
-        swal({   
+        swal({
             title: ` Voulez vous supprimer ?`,
             text: "Le reçu de frais scolaires sera supprimé avec son montant !",
             showCancelButton: true,
             confirmButtonText: 'OUI',
             cancelButtonText: 'ANNULER',
-            confirmButtonClass: 'btn bg-warning-400',
+            confirmButtonClass: 'btn bg-orange-400',
             cancelButtonClass: 'btn btn-light',
             buttonsStyling: false
         }).then((isConfirm) => {
@@ -251,13 +297,13 @@ $(document).on('click', '.recu', function (e) {
                 type: "get",
                 url: '/recu_sup/' + id,
                 success: function(response) {
-             
+
                 }
             });
-          
+
         }
-       
-        
+
+
        });
     });
 /////////////////fin delete eleve//////////////////////
@@ -275,7 +321,7 @@ $(document).on('click', '.recu_up', function (e) {
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                } 
+                }
             });
              $.ajax({
                 type: "post",
@@ -292,7 +338,7 @@ $(document).on('click', '.recu_up', function (e) {
             }).show();
                 }
             });
-          
+
     }            );
 /////////////////fin//////////////////////
 
@@ -300,10 +346,10 @@ $(document).on('click', '.recu_up', function (e) {
 $(document).on('click', '.delete_frais', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
-        swal({    
-            title: "Voulez-vous supprimer ?", 
+        swal({
+            title: "Voulez-vous supprimer ?",
             confirmButtonText: "Oui",
-            cancelButtonText: "Annuler", 
+            cancelButtonText: "Annuler",
             showCancelButton: true,
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
@@ -311,9 +357,9 @@ $(document).on('click', '.delete_frais', function (e) {
           swal({
             text: "La reçu est supprimé !",
             type: "success",
-          });  
+          });
         }
-        
+
        });
     });
 /////////////////fin delete frais//////////////////////
@@ -322,11 +368,11 @@ $(document).on('click', '.delete_frais', function (e) {
 $(document).on('click', '#modalite', function (e) {
     e.preventDefault();
     var id = $(this).data('id');
-        swal({    
-            title: "Voulez-vous supprimer ?", 
+        swal({
+            title: "Voulez-vous supprimer ?",
             type: "warning",
             confirmButtonText: "Oui",
-            cancelButtonText: "Annuler", 
+            cancelButtonText: "Annuler",
             showCancelButton: true,
         }).then((isConfirm) => {
         if (isConfirm.value === true) {
@@ -334,9 +380,9 @@ $(document).on('click', '#modalite', function (e) {
           swal({
             text: "Le montant fixé est supprimé !",
             type: "success",
-          });  
+          });
         }
-        
+
        });
     });
 /////////////////fin delete frais//////////////////////
@@ -351,56 +397,56 @@ $(document).on('click', '#modalite', function (e) {
 
     //Warning Message
     $('#sa-warning').click(function(){
-        swal({   
-            title: "Are you sure?",   
-            text: "You will not be able to recover this imaginary file!",   
-            type: "warning",   
-            showCancelButton: true,   
-            confirmButtonColor: "#DD6B55",   
-            confirmButtonText: "Yes, delete it!",   
-            closeOnConfirm: false 
-        }, function(){   
-            swal("Deleted!", "Your imaginary file has been deleted.", "success"); 
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        }, function(){
+            swal("Deleted!", "Your imaginary file has been deleted.", "success");
         });
     });
 
     //Parameter
     $('#sa-param').click(function(){
-        swal({   
-            title: "Are you sure?",   
-            text: "You will not be able to recover this imaginary file!",   
-            type: "warning",   
-            showCancelButton: true,   
-            confirmButtonColor: "#DD6B55",   
-            confirmButtonText: "Yes, delete it!",   
-            cancelButtonText: "No, cancel plx!",   
-            closeOnConfirm: false,   
-            closeOnCancel: false 
-        }, function(isConfirm){   
-            if (isConfirm) {     
-                swal("Deleted!", "Your imaginary file has been deleted.", "success");   
-            } else {     
-                swal("Cancelled", "Your imaginary file is safe :)", "error");   
-            } 
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to recover this imaginary file!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel plx!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function(isConfirm){
+            if (isConfirm) {
+                swal("Deleted!", "Your imaginary file has been deleted.", "success");
+            } else {
+                swal("Cancelled", "Your imaginary file is safe :)", "error");
+            }
         });
     });
 
     //Custom Image
     $('#sa-image').click(function(){
-        swal({   
-            title: "Govinda!",   
-            text: "Recently joined twitter",   
-            imageUrl: "../assets/images/users/agent2.jpg" 
+        swal({
+            title: "Govinda!",
+            text: "Recently joined twitter",
+            imageUrl: "../assets/images/users/agent2.jpg"
         });
     });
 
     //Auto Close Timer
     $('#sa-close').click(function(){
-         swal({   
-            title: "Auto close alert!",   
-            text: "I will close in 2 seconds.",   
-            timer: 2000,   
-            showConfirmButton: false 
+         swal({
+            title: "Auto close alert!",
+            text: "I will close in 2 seconds.",
+            timer: 2000,
+            showConfirmButton: false
         });
     });
 
@@ -410,7 +456,7 @@ $(document).on('click', '#modalite', function (e) {
     $.SweetAlert = new SweetAlert, $.SweetAlert.Constructor = SweetAlert
 }(window.jQuery),
 
-//initializing 
+//initializing
 function($) {
     "use strict";
     $.SweetAlert.init()

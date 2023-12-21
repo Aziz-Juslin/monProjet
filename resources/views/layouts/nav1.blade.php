@@ -2,7 +2,7 @@
     <div class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="navbar-brand wmin-200">
            <a href="{{route('home')}}" class="d-inline-block">
-				<img src="/img/ds.png" alt="">
+				<img src="/img/d6.png" alt="">
 			</a>
         </div>
 
@@ -64,8 +64,8 @@
                         <div class="dropdown-content-body p-2">
                             <div class="row no-gutters">
                                 <div class="col-12 col-sm-3">
-                                    <a href="#" class="d-block text-default text-center ripple-dark rounded p-3">
-                                        <i class="icon-users4 icon-2x"></i>
+                                    <a href="{{route('eleve')}}" class="d-block text-default text-center ripple-dark rounded p-3">
+                                        <i class="icon-users4 icon-2x text-slate"></i>
                                         <div class="font-size-sm font-weight-semibold text-uppercase mt-2">Elèves</div>
                                     </a>
 
@@ -165,7 +165,8 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> Mon profile</a>
+                        <a href="{{route($photoAdmin->isEmpty() ?  'info_admin':'admin_show')}}" class="dropdown-item"><i class="icon-user-plus"></i> Mon profile</a>
+                        <a href="{{route($photoAdmin->isEmpty() ?  'info_admin':'admin_show')}}" class="dropdown-item"><i class="icon-user-plus"></i> Mon profile</a>
                         <div class="dropdown-divider"></div>
                         <a  class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();

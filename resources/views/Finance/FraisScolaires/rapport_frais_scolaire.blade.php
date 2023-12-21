@@ -85,7 +85,7 @@
           <div class="row">
             @foreach($datePaye as $journal)
               <div class="col-lg-6">
-                <div class="card border-left-3 border-left-light rounded-left-0">
+                <div class="card border-left-3 border-left-orange rounded-left-0">
                   <div class="card-body">
                     <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
                       <div>
@@ -116,8 +116,8 @@
 
                       <li class="list-inline-item dropdown">
                         <div>
-                          <a  class=""><i class="icon-printer"></i></a>
-                        </div>
+                            <a data-id="{{$journal->id}}" data-name="{{AfficheJour(( new DateTime($journal->date_rapport))->format('D'))}} {{( new DateTime($journal->date_rapport))->format('d/m/Y')}}" class="btn btn-light frais_scolaire_rapport"><i class="icon-bin"></i></a>
+                          </div>
                       </li>
                     </ul>
                   </div>

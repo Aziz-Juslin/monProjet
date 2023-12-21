@@ -17,18 +17,18 @@
           </div>
         @empty
       <div class="col-md-12 text-center">
-      
+
       <p class="nav-item h3"><a  class="nav-link">Aucun cycle</a></p>
       <p class="nav-item "><a  class="nav-link">Nous vous signalons que votre compte n'est pas configuré.</a></p>
       <p class="nav-item bg-light btn"><a href="{{route('cycle_ecole')}}"  class="nav-link">Cliquer ici</a></p>
         </div>
         @endforelse
-                                    
+
          </div>
          </div>
          <div class="col-md-3"></div>
     </div>              <!-- /seamless button group -->
     </div>              <!-- /seamless button group -->
-    </div>              <!-- /seamless button group --> 
+    </div>              <!-- /seamless button group -->
 @include('layouts.footer1')
-@stop                   
+@stop

@@ -52,7 +52,7 @@
 
                             <div class="form-group d-flex align-items-center">
 
-                                <a href="login_password_recover.html" class="ml-auto">Mot de passe oublié ?</a>
+                                <a href="" class="ml-auto">Mot de passe oublié ?</a>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn bg-orange-400 btn-block">Connexion <i class="icon-circle-right2 ml-2"></i></button>

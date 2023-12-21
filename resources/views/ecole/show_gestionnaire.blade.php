@@ -1,17 +1,17 @@
-@extends('layouts.master', ['title' => Auth::user()->ecole])
+@extends('layouts.master3', ['title' => Auth::user()->ecole])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
             <!-- Content area -->
             <div class="content">
                 @include('ecole.message_ecole')
-                
+
                 <!-- Form validation -->
                 <div class="card">
                     <div class="card-header header-elements-inline">
                         <h5 class="card-title">Photos Admin</h5>
-                        
+
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -66,7 +66,7 @@
                     </div>
                     @foreach($Admin as $ecole)
                     <div class="card-body">
-                        
+
                         <form  action="{{route('update_admin', $ecole->id)}}" method="POST" >
                         @csrf
                             <fieldset class="mb-3">
@@ -131,13 +131,13 @@
                                     <div class="col-lg-9">
                                         <div class="form-group-feedback form-group-feedback-right">
                                             <select style="border: none;" class="form-control" name="qualification" id="exampleSelect1">
-                                    <option >{{$ecole->qualification}}</option> 
-                                    <option value="SRF">SRF</option> 
-                                    <option value="D6">D6</option> 
-                                    <option value="Gradué">Gradué</option> 
-                                    <option value="Licencié">Licencié</option> 
-                                    <option value="Docteur">Docteur</option> 
-                                    <option value="S.E">S.E</option> 
+                                    <option >{{$ecole->qualification}}</option>
+                                    <option value="SRF">SRF</option>
+                                    <option value="D6">D6</option>
+                                    <option value="Gradué">Gradué</option>
+                                    <option value="Licencié">Licencié</option>
+                                    <option value="Docteur">Docteur</option>
+                                    <option value="S.E">S.E</option>
                                     </select>
                                         </div>
                                     </div>
@@ -165,10 +165,10 @@
                     </div>
                 </div>
                 <!-- /form validation -->
-            
+
 
             </div>
-            <!-- /content area -->         
+            <!-- /content area -->
 
 
 @include('layouts.footer')

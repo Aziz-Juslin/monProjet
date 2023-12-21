@@ -1,7 +1,7 @@
-@extends('layouts.master', ['title' => Auth::user()->name])
+@extends('layouts.master3', ['title' => Auth::user()->name])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
             <!-- Content area -->
             <div class="content">
@@ -12,7 +12,7 @@
                         <legend class="text-uppercase font-size-sm font-weight-bold">Cycles séléctionnés</legend>
                     </div>
                     <div class="card-body">
-                       
+
                         <fieldset class="mb-3">
                                 <legend class="text-uppercase font-size-sm font-weight-bold"></legend>
                                 <!-- Basic checkbox group -->
@@ -39,13 +39,13 @@
                             @if($cycles->count() == '4')
                             @else
                             <div class="d-flex justify-content-end align-items-center">
-                                <a href="{{route('cycle_ecole')}}" class="btn btn-light" id="reset"> Ajouter <i class="icon-plus3 ml-2"></i></a> 
+                                <a href="{{route('cycle_ecole')}}" class="btn btn-light" id="reset"> Ajouter <i class="icon-plus3 ml-2"></i></a>
                             </div>
                             @endif
                     </div>
                 </div>
                 <!-- /form validation -->
             </div>
-            <!-- /content area -->         
+            <!-- /content area -->
 @include('layouts.footer1')
 @endsection

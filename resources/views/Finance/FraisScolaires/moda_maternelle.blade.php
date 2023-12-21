@@ -34,7 +34,7 @@
                 <th>Trimestre</th>
                 <th>Montant à payer</th>
                 <th>Année Scolaire</th>
-                <th>Actions</th>
+                <th></th>
                 <th></th>
               </tr>
             </thead>

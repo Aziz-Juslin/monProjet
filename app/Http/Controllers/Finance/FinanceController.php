@@ -246,6 +246,10 @@ class FinanceController extends KamataNioso
             'datePaye' =>  RapportFrais::where('user_id', Auth::user()->id)->get(),
         ], $this->Kamata($this->getUser(), $this->id));
     }
+    public function delete_rapport_frais_scolaire($id){
+        Session()->flash('messages','Rapport est supprimé');
+        return RapportFrais::where('id', $id)->delete();
+    }
 //-------------------------Rapport des autres frais ----------------------------
 public function rapportAutreFrais(){
     $date = RapportAutreFrais::where('user_id', Auth::user()->id)->pluck('jour')->last();
@@ -269,6 +273,11 @@ public function rapport_autre_frais(){
     return view('Finance.AutreFrais.rapport_autre_frais',[
         'datePayes' =>  RapportAutreFrais::where('user_id', Auth::user()->id)->get(),
     ], $this->Kamata($this->getUser(), $this->id));
+}
+
+public function delete_rapport_autre_frais($id){
+    Session()->flash('messages','Rapport est supprimé');
+    return RapportAutreFrais::where('id', $id)->delete();
 }
     /**
      * Show the form for creating a new resource.

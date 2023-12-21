@@ -10,6 +10,18 @@ if(!function_exists('col_active')){
 	}
 }
 
+
+
+if(!function_exists('imageAffiche')){
+    function imageAffiche(){
+        $tab = [
+            1 => "kiala",
+            2 => "kiala aziz",
+        ];
+
+    }
+}
+
 if(!function_exists('nom_route')){
 	function nom_route(){
 		$nRoute = Route::get('');
@@ -85,7 +97,7 @@ if(!function_exists('getRoute')){
 	}
 }
 
-/// cette méthode met les phrases en majuscule 
+/// cette méthode met les phrases en majuscule
 if(! function_exists('count_number')){
 	function count_number($chain, $nombre){
 		$plural = 's';
@@ -141,12 +153,12 @@ function Date_ConvertSqlTab($date_sql) {
         $heure = substr($date_sql, 11, 2);
         $minute = substr($date_sql, 14, 2);
         $seconde = substr($date_sql, 17, 2);
-        
+
         $key = array('annee', 'mois', 'jour', 'heure', 'minute', 'seconde');
         $value = array($annee, $mois, $jour, $heure, $minute, $seconde);
-        
+
         $tab_retour = array_combine($key, $value);
-        
+
         return $tab_retour;
     }
 
@@ -166,11 +178,11 @@ function Date_ConvertSqlTab($date_sql) {
                     $tab_date['annee']);
 
     $mkt_now = time();
-    
+
     $diff = $mkt_jourj - $mkt_now;
-    
+
     $unjour = 3600 * 24;
-    
+
     if($diff>=$unjour) {
         // EN JOUR
         $calcul = $diff / $unjour;
@@ -199,7 +211,7 @@ function Date_ConvertSqlTab($date_sql) {
         // DEPUIS EN HEURES
         $calcul = abs($diff) / 3600;
         return 'il y a '.ceil($calcul).' heure'.AuPluriel($calcul).
-'';        
+'';
 
     } else {
         // DEPUIS EN JOUR

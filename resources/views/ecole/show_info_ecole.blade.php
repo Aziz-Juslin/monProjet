@@ -1,21 +1,21 @@
-@extends('layouts.master', ['title' => Auth::user()->ecole])
+@extends('layouts.master3', ['title' => Auth::user()->ecole])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
             <!-- Content area -->
             <div class="content">
                 @include('ecole.message_ecole')
-                
+
                 <!-- Form validation -->
                 <div class="card">
                 <div class="card-header header-elements-inline">
                  <legend class="text-uppercase font-size-sm font-weight-bold">Photo ecole</legend>
                     </div>
                     <div class="card-body">
-                        
+
                       <div class="row">
-                    
+
                     <div class="col-sm-6 col-xl-3">
                         <div class="card">
                             @foreach($photos as $photo)
@@ -65,7 +65,7 @@
                     </div>
                     @foreach($infoEcole as $ecole)
                     <div class="card-body">
-                        
+
                         <form  action="{{route('info_update', $ecole->id)}}" method="POST" >
                         @csrf
                             <fieldset class="mb-3">
@@ -153,7 +153,7 @@
                 <!-- /form validation -->
 
             </div>
-            <!-- /content area -->         
+            <!-- /content area -->
 
 
 @include('layouts.footer1')

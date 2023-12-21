@@ -1,14 +1,14 @@
 @extends('layouts.master1', ['title'=> 'Rapport autres frais'])
 @section('section')
 @include('Finance.tete_finance')
-@include('Finance.AutreFrais.head_autre_frais')   
+@include('Finance.AutreFrais.head_autre_frais')
 <div class="content-wrapper">
       <!-- Content area -->
       <div class="content">
       <!-- Orders history (datatable) -->
       <div class="row">
-         <div class="col-md-3 bg-slate-300 card">
-          <div  class="btn bg-blue btn-block mt-1 rapport_autre">
+         <div class="col-md-3">
+          <div  class="btn bg-orange btn-block mt-1 rapport_autre">
           <span class="text-uppercase  font-size-sm font-weight-semibold"><i class="icon-statistics mr-2"></i>éffectuer le rapport</span>
             </div>
             <div class="mt-2">
@@ -47,22 +47,25 @@
                 </div>
                 <div class=" border-0 p-0">
                   <ul class="nav nav-sidebar ">
-    
+
                     <li class="nav-item ">
                       <a href="" class="nav-link"><i class="icon-arrow-right13"></i>0</a>
                     </li>
-                    
+
                   </ul>
                 </div>
                 </div>
-        
+
               <!-- /categories -->
 
       <div class="col-md-9">
-        <div class="">
-        <div class="card-header bg-slate header-elements-inline">
-        <span class="text-uppercase  font-size-sm font-weight-semibold">Rapport Journalier</span>
-          </div>
+        <div class="mb-3">
+            <h6 class="mb-0 font-weight-semibold">
+              Rapports Journalier autres frais
+
+            </h6>
+
+            <span class="text-muted d-block">Année scolaire: <code>{{Anneesco()}}</code></span>
           </div>
         <div class="card-body">
                <div class="d-md-flex align-items-md-center flex-md-wrap text-center text-md-left">
@@ -71,18 +74,18 @@
                 </ul>
 
                 <ul class="list-inline mb-0 ml-md-auto">
-                  <li class="list-inline-item dropdown">
-                    <a href="{{route('invoice_rapport_frais_scolaire', Auth::user()->ecole)}}" class="btn btn-link text-default">
-                      <i  class="icon-printer mr-2"></i>
-                    </a>
-                  </li>
-                </ul>
+                    <li class="list-inline-item dropdown">
+                      <a href="{{route('invoice_rapport_frais_scolaire', Auth::user()->ecole)}}" class="btn bg-light btn-block ">
+                        <i  class="icon-list3 mr-2"></i> Liste
+                      </a>
+                    </li>
+                  </ul>
               </div>
           </div>
           <div class="row">
             @foreach($datePayes as $journal)
               <div class="col-lg-6">
-                <div class="card border-left-3 border-left-light rounded-left-0">
+                <div class="card border-left-3 border-left-orange rounded-left-0">
                   <div class="card-body">
                     <div class="d-sm-flex align-item-sm-center flex-sm-nowrap">
                       <div>
@@ -110,10 +113,10 @@
                     </span>
 
                     <ul class="list-inline list-inline-condensed mb-0 mt-2 mt-sm-0">
-                      
+
                       <li class="list-inline-item dropdown">
                         <div>
-                          <a  class=""><i class="icon-printer"></i></a>
+                          <a data-id="{{$journal->id}}" data-name="{{AfficheJour(( new DateTime($journal->date_rapport))->format('D'))}} {{( new DateTime($journal->date_rapport))->format('d/m/Y')}}" class="btn btn-light autre_frais_rapport"><i class="icon-bin"></i></a>
                         </div>
                       </li>
                     </ul>
@@ -121,17 +124,11 @@
                 </div>
               </div>
               @endforeach
-              
           </div>
-
-
-
           </div>
       </div>
     </div>
 </div>
 </div>
-
 @include('layouts.footer1')
-@stop                   
-       
+@stop

@@ -9,14 +9,14 @@
                                     </div>
                                 </div>
                             </div>
-          
+
                             <div class="card-body">
                             <form  action="{{route('store_eleve')}}" method="post" enctype="multipart/form-data">
                              @csrf
                                 <div class="row">
                                     <div class="col-md-4">
                                     <div class="form-group">
-                                      
+
                                         <input type="text" name="nom" class="form-control" placeholder="Nom">
                                         @error('nom')
                                          <span class="text-left text-muted">
@@ -137,7 +137,7 @@
                                     <label>Niveau:</label>
                                     <select class="form-control" name="classe" id="exampleSelect1">
                                     <option value="1èr">1èr</option>
-                                    <option value="2ème">2ème</option> 
+                                    <option value="2ème">2ème</option>
                                     <option value="3ème">3ème</option>
                                     <option value="4ème">4ème</option>
                                     <option value="5ème">5ème</option>
@@ -152,7 +152,7 @@
                                     @enderror
                                     </div>
                                     </div>
-                                   
+
                                     <div class="col-md-4">
                                     <div class="form-group">
                                     <label>Option:</label>
@@ -177,14 +177,14 @@
                                     <div class="form-group">
                                     <label>Local:</label>
                                     <select class="form-control" name="local" id="exampleSelect1">
-                                      <option value="A">A</option> 
-                                      <option value="B">B</option> 
-                                      <option value="C">C</option> 
-                                      <option value="D">D</option> 
-                                      <option value="E">E</option> 
+                                      <option value="A">A</option>
+                                      <option value="B">B</option>
+                                      <option value="C">C</option>
+                                      <option value="D">D</option>
+                                      <option value="E">E</option>
                                       <option value="F">F</option>
                                       <option value="G">G</option>
-                                      <option value="1">1</option> 
+                                      <option value="1">1</option>
                                       <option value="2">2</option>
                                       <option value="3">3</option>
                                       <option value="4">4</option>
@@ -212,7 +212,7 @@
                                     @enderror
                                     </div>
                                     </div>
-                                    
+
                                     <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Téléphone:</label>
@@ -224,7 +224,7 @@
                                         @enderror
                                     </div>
                                     </div>
-                                      
+
                                     <div class="col-md-4">
                                      <div class="form-group row">
                                         <label class="col-lg-3 col-form-label">Sexe:</label>
@@ -262,14 +262,13 @@
                                         @enderror
                                     </div>
                                 </div>
-                                        
-                                    
+
+
                                      <!--- bloc 1 --->
                          <div class="d-flex justify-content-start align-items-center">
-                                        
-                             <button type="submit" class="btn bg-warning-400 ml-3">Ajouter <i class="icon-paperplane ml-2"></i></button>
+
+                             <button type="submit" class="btn bg-orange-400 ml-3">Ajouter <i class="icon-paperplane ml-2"></i></button>
                          </div>
                     </form>
                 </div>
              </div>
-    

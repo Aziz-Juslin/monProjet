@@ -28,13 +28,13 @@
 	<script src="{{asset('/global_assets/js/plugins/ui/moment/moment.min.js')}}"></script>
 	<script src="{{asset('/global_assets/js/plugins/pickers/daterangepicker.js')}}"></script>
 	<script src="{{asset('/global_assets/js/plugins/ui/perfect_scrollbar.min.js')}}"></script>
-	
+
 	<script src="{{asset('/global_assets/js/demo_pages/dashboard.js')}}"></script>
 	<script src="{{asset('/global_assets/js/demo_pages/layout_fixed_sidebar_custom.js')}}"></script>
 	<!-- /theme JS files -->
 	@include('layouts.tetes.tableau')
 	<script src="{{asset('/assets/js/app.js')}}"></script>
-	
+
 	<!-- /theme JS files -->
 </head>
 <body class="navbar-top bg-slate-800 text-muted">

@@ -28,7 +28,11 @@ Route::get('/elev/{id}/{code_eleve}', [App\Http\Controllers\Eleve\EleveControlle
 ///-----------------------------------autre frais-----------------------------------------------------------------------------------------------------------------
 Route::get('/autre-frais/{id}/{slug}-{post}-{prenom}', [App\Http\Controllers\Eleve\EleveController::class, 'autreFrais'])->name('autreFrais');
 Route::post('/autre-frais-store/{id}', [App\Http\Controllers\Eleve\EleveController::class, 'autre_frais_store'])->name('autre_frais_store');
+
 Route::get('/{id}deleteautre', [App\Http\Controllers\Eleve\EleveController::class, 'deleteautre'])->name('deleteautre');
+Route::get('/{id}autre_frais_rapport', [App\Http\Controllers\Eleve\EleveController::class, 'delete_rapport_autre_frais'])->name('autre_frais_rapport');
+Route::get('/{id}frais_scolaire_rapport', [App\Http\Controllers\Eleve\EleveController::class, 'delete_rapport_frais_scolaire'])->name('frais_scolaire_rapport');
+
 Route::get('/luka_recu/{id}/{slug}-{post}-{prenom}', [App\Http\Controllers\Eleve\EleveController::class, 'luka_recu'])->name('luka_recu');
 Route::get('/recu_par_annee/{id}/{annee_frais}', [App\Http\Controllers\Eleve\EleveController::class, 'luka_recu_annee'])->name('luka_recu_annee');
 Route::get('/luka_autreFrais_par_categorie/{id}/{categorie}', [App\Http\Controllers\Eleve\EleveController::class, 'luka_autreFrais_par_categorie'])->name('luka_autreFrais_par_categorie');
