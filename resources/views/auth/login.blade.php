@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="form-group">
-                                <a href="{{url('register')}}" class="btn btn-danger btn-block">Créer compte</a>
+                                <a href="{{url('register')}}" class="btn btn-dark  btn-block">Créer compte</a>
                             </div>
                         </div>
                     </div>
