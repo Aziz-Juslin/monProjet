@@ -7,4 +7,4 @@
 2-Six c'est une application web destinée pour la gestion des écoles.
 
 
-
+<p align="center"><a href="{{route('home')}}" target="_blank">Visite l'application</a></p>
