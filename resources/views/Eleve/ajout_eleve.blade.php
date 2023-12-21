@@ -13,7 +13,7 @@
 @else
 <div class="row">
 <div class="col-md-12">
-@include('ebandeli.ebandeli2')           <!-- Left aligned buttons -->
+         <!-- Left aligned buttons -->
 <div class="card">
 <div class="text-center text-muted p-5">
 <i style="font-size: 50px" class="icon-notification2"></i><br>

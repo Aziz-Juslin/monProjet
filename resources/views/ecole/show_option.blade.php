@@ -1,18 +1,17 @@
 @extends('layouts.master', ['title' => Auth::user()->name])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
             <!-- Content area -->
             <div class="content">
-                @include('ecole.message_ecole')
                 <!-- Form validation -->
                 <div class="card">
                     <div class="card-header header-elements-inline">
                          <legend class="text-uppercase font-size-sm font-weight-bold">Options Organisées</legend>
                     </div>
                     <div class="card-body">
-                        
+
                         <fieldset class="mb-3">
                                 <legend class="text-uppercase font-size-sm font-weight-bold"></legend>
                                 <!-- Basic checkbox group -->
@@ -37,16 +36,16 @@
                                 <!-- /basic checkbox group -->
                             </fieldset>
                             <div class="d-flex justify-content-end align-items-center">
-                                <a href="{{route('option_ecole')}}" class="btn btn-light" id="reset"> Ajouter <i class="icon-plus3 ml-2"></i></a> 
+                                <a href="{{route('option_ecole')}}" class="btn btn-light" id="reset"> Ajouter <i class="icon-plus3 ml-2"></i></a>
                             </div>
-        
-                        
+
+
                     </div>
                 </div>
                 <!-- /form validation -->
 
             </div>
-            <!-- /content area -->         
+            <!-- /content area -->
 
 
 @include('layouts.footer1')

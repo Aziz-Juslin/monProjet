@@ -3,7 +3,7 @@
 <!-- Main content -->
 @include('layouts.aside2')
 <!-- Content area -->
-            <div class="content">
+
                 <!-- Form action components -->
                 <div class="row">
                     <div class="col-md-12">
@@ -107,14 +107,15 @@
                             </div>
                                     <div class="d-flex justify-content-start align-items-center">
 
-                                        <button type="submit" class="btn bg-info-400 ml-3">Confirmer <i class="icon-paperplane ml-2"></i></button>
+                                        <button type="submit" class="btn bg-orange-400 ml-3">Confirmer <i class="icon-paperplane ml-2"></i></button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     </div>
-                    </div>
-<!-- /content area -->
+                </div>
+            </div>
+
 @include('layouts.footer1')
 @endsection

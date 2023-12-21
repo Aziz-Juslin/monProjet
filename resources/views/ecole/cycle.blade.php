@@ -1,10 +1,10 @@
-@extends('layouts.master', ['title' => Auth::user()->name])
+@extends('layouts.master3', ['title' => Auth::user()->name])
 @section('section')
 <!-- Main content -->
 @include('layouts.aside2')
-<div class="content">
+
     <!-- Form validation -->
-                <div class="card bg-slate">
+                <div class="card bg">
                     <div class="card-header header-elements-inline">
                          <legend class="text-uppercase font-size-sm font-weight-bold">Cycles</legend>
                     </div>
@@ -36,12 +36,13 @@
                                 <!-- /basic checkbox group -->
                             </fieldset>
                             <div class="d-flex justify-content-end align-items-center">
-                                <button type="submit" class="btn btn-primary ml-3">Confirmer <i class="icon-paperplane ml-2"></i></button>
+                                <button type="submit" class="btn bg-orange-400 ml-3">Confirmer <i class="icon-paperplane ml-2"></i></button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>
             <!-- /content area -->
 @include('layouts.footer1')
 @endsection

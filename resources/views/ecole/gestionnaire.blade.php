@@ -1,7 +1,7 @@
-@extends('layouts.master', ['title' => Auth::user()->name])
+@extends('layouts.master3', ['title' => Auth::user()->name])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')      
+@include('layouts.aside2')
 <!-- Content area -->
             <div class="content">
                 @include('ecole.message_ecole')
@@ -64,7 +64,7 @@
                                     </div>
                                     </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                     <div class="col-md-12">
                                     <div class="form-group">
@@ -77,7 +77,7 @@
                                     </div>
                                     </div>
                                  <div class="d-flex justify-content-start align-items-center">
-                                        
+
                                         <button type="submit" class="btn bg-blue ml-3">Confirmer <i class="icon-paperplane ml-2"></i></button>
                                     </div>
                                 </form>

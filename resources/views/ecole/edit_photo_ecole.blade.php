@@ -1,17 +1,17 @@
-@extends('layouts.master', ['title' => Auth::user()->ecole])
+@extends('layouts.master3', ['title' => Auth::user()->ecole])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
             <!-- Content area -->
             <div class="content">
                 @include('ecole.message_ecole')
-                
+
                 <!-- Form validation -->
                 <div class="card">
                     <div class="card-header header-elements-inline">
                          <legend class="text-uppercase font-size-sm font-weight-bold">Modifier la photo</legend>
-                        
+
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -26,10 +26,10 @@
                                     </a>
                                 </div>
                             </div>
-                           
+
                         </div>
                     </div>
-                    
+
                     </div>
                     </div>
                     </div>
@@ -52,7 +52,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-start align-items-center">  
+                                <div class="d-flex justify-content-start align-items-center">
                                 <button type="submit" class="btn bg-blue ml-3">Modifier <i class="icon-paperplane ml-2"></i></button>
                             </div>
                          </form>
@@ -60,6 +60,6 @@
                      @endforeach
                     </div>
             </div>
-<!-- /content area -->         
+<!-- /content area -->
 @include('layouts.footer1')
 @endsection

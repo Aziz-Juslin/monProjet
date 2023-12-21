@@ -1,17 +1,15 @@
-@extends('layouts.master', ['title' => Auth::user()->name])
+@extends('layouts.master3', ['title' => Auth::user()->name])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
 
 
-            <!-- Content area -->
-            <div class="content">
-                @include('ecole.message_ecole')
+
                 <!-- Form validation -->
                 <div class="card">
                     <div class="card-header header-elements-inline">
-                        
+
                          <legend class="text-uppercase font-size-sm font-weight-bold">selection des options</legend>
                     </div>
 
@@ -50,20 +48,21 @@
                                     </select>
                                 </div>
                             </div>
-                        
+
                                 <hr>
                             </fieldset>
                             <div class="d-flex justify-content-end align-items-center">
-                                <button type="submit" name="submit" class="btn btn-primary ml-3">Ajouter <i class="icon-plus3 ml-2"></i></button>
+                                <button type="submit" name="submit" class="btn bg-orange-400 ml-3">Ajouter <i class="icon-plus3 ml-2"></i></button>
                             </div>
-                            
+
                         </form>
                     </div>
                 </div>
                 <!-- /form validation -->
 
             </div>
-            <!-- /content area -->         
+        </div>
+            <!-- /content area -->
 <!-- /content area -->
 @include('layouts.footer1')
 @endsection

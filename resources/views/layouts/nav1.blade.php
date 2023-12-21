@@ -165,7 +165,8 @@
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
-                        <a href="#" class="dropdown-item"><i class="icon-user-plus"></i> Mon profile</a>
+                        <a href="{{route($photoAdmin->isEmpty() ?  'info_admin':'admin_show')}}" class="dropdown-item"><i class="icon-user-plus"></i> Mon profile</a>
+                        <a href="{{route($photoAdmin->isEmpty() ?  'info_admin':'admin_show')}}" class="dropdown-item"><i class="icon-user-plus"></i> Mon profile</a>
                         <div class="dropdown-divider"></div>
                         <a  class="dropdown-item" href="{{ route('logout') }}"
                          onclick="event.preventDefault();

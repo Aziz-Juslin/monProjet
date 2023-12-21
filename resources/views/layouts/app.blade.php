@@ -14,18 +14,7 @@
 
                     <div class="header-elements d-none">
                         <div class="d-flex justify-content-center">
-                            <a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
-                                <i class="icon-bars-alt text-pink-300"></i>
-                                <span>Statistics</span>
-                            </a>
-                            <a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
-                                <i class="icon-calculator text-pink-300"></i>
-                                <span>Personnel</span>
-                            </a>
-                            <a href="#" class="btn btn-link btn-float font-size-sm font-weight-semibold text-default">
-                                <i class="icon-calendar5 text-pink-300"></i>
-                                <span>Elèves</span>
-                            </a>
+                            <img class="img-fluid" width="100" src="img/d6.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -37,28 +26,7 @@
                             <a href="general_knowledgebase.html" class="breadcrumb-item">{{AnneeScolaire()}}</a>
                         </div>
 
-                        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-plus3"></i></a>
-                    </div>
-
-                    <div class="header-elements d-none">
-                        <div class="breadcrumb justify-content-center">
-                            <a href="#" class="breadcrumb-elements-item">
-                                <i class="icon-comment-discussion mr-2"></i>
-                                Notification
-                            </a>
-
-                            <div class="breadcrumb-elements-item dropdown p-0">
-                                <a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
-                                    <i class="icon-gear mr-2"></i>
-                                    Paramètres
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <a href="{{route($infoEcole->isEmpty() ?  'info_ecole' :'info_ecole_show')}}" class="dropdown-item"><i class="icon-user-lock"></i> Compte et sécurité</a>
-                                </div>
-                            </div>
                         </div>
-                    </div>
                 </div>
             </div>
             <!-- /page header -->

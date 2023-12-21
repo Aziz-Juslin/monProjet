@@ -1,17 +1,17 @@
-@extends('layouts.master', ['title' => Auth::user()->ecole])
+@extends('layouts.master3', ['title' => Auth::user()->ecole])
 @section('section')
 <!-- Main content -->
-@include('layouts.aside2')     
+@include('layouts.aside2')
 <!-- Content area -->
             <!-- Content area -->
             <div class="content">
                 @include('ecole.message_ecole')
-                
+
                 <!-- Form validation -->
                 <div class="card">
                     <div class="card-header header-elements-inline">
                         <h5 class="card-title">Photos Admin</h5>
-                        
+
                     </div>
                     <div class="card-body">
                       <div class="row">
@@ -52,11 +52,11 @@
                     </div>
                     </div>
 
-                
-            
+
+
 
             </div>
-            <!-- /content area -->         
+            <!-- /content area -->
 
 
 @include('layouts.footer')
